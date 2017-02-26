@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app='belajar'>
+  <head>
+    <meta charset="utf-8">
+    <title>Belajar Angular</title>
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body ng-controller='AppController'>
+
+    <input type="text" ng-model='nama'>
+    <h1>Hallo {{nama}}</h1>
+
+
+    <input type="number" ng-model='angka1'>
+    <input type="number" ng-model='angka2'>
+
+    <p> hasilnya adalah : {{angka1 + angka2}}
+
+
+<table class='table table-bordered'>
+  <thead>
+    <tr>
+      <th>npm</th>
+      <th>nama</th>
+      <th>kelas</th>
+    </tr>
+  </thead>
+  <tbody ng-repeat='m in mahasiswas'>
+    <tr>
+      <td>{{m.npm}}</td>
+      <td>{{m.nama}}</td>
+      <td>{{m.kelas}}</td>
+    </tr>
+  </tbody>
+</table>
+
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+
+    <script type="text/javascript">
+      angular
+      .module('belajar',[])
+      .controller('AppController', function($scope){
+        $scope.mahasiswas = [
+          {
+            'npm' : '12345',
+            'nama' : 'Adhib Arfan',
+            'kelas' : '4ia10',
+          },
+          {
+            'npm' : '12345',
+            'nama' : 'Rizki Mufrizal',
+            'kelas' : '4ia04',
+          }
+        ]
+      });
+    </script>
+  </body>
+</html>

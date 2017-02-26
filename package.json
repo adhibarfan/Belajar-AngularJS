@@ -1,0 +1,11 @@
+{
+  "name": "Belajar-AngularJS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Adhib Arfan <adhib.arfan@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0"
+  }
+}
